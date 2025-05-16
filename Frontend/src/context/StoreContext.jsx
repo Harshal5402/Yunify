@@ -6,7 +6,8 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
     
   const [token, setToken] = useState("");
-  const url = "http://localhost:4000";
+  // const url = "http://localhost:4000";
+  const url = "https://yunify-backend-5sw8.onrender.com"
 
    useEffect(() => {
     const storedToken = localStorage.getItem("token");

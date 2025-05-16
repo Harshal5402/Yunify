@@ -19,7 +19,8 @@ const ProfileCard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const backendURL = "http://localhost:4000/api/registration/profile"; 
+  // const backendURL = "http://localhost:4000/api/registration/profile"; 
+  const backendURL = "https://yunify-backend-5sw8.onrender.com/api/registration/profile";
 
   useEffect(() => {
     const fetchProfile = async () => {
