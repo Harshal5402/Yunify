@@ -1,0 +1,102 @@
+.testimonial-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 350px;
+}
+
+.testimonial-wrapper {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 40px 30px;
+}
+
+.slider-box {
+  width: 100%;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #3e00ff, #a400ff, #ff00ff);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow:
+    0 8px 20px rgba(164, 0, 255, 0.6),
+    0 5px 15px rgba(0, 207, 255, 0.4);
+  text-align: center;
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow:
+    0 16px 40px rgba(164, 0, 255, 0.8),
+    0 12px 30px rgba(0, 207, 255, 0.6);
+}
+
+.message {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #e1caff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.stars {
+  color: #ffcb05;
+  font-size: 22px;
+  text-shadow: 0 0 6px #ffcb05;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #a400ff;
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff00ff;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    padding: 30px 20px;
+  }
+  .testimonial-card {
+    padding: 25px 20px;
+  }
+  .message {
+    font-size: 1rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+}

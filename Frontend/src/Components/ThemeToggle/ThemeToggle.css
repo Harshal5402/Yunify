@@ -1,0 +1,27 @@
+.theme-toggle-btn {
+  background-color: transparent;
+  /* border: 2px solid #49557e;  */
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1); 
+}
+
+.theme-toggle-btn:focus {
+  outline: none;
+}
+
+.theme-toggle-btn i {
+  color: #49557e;
+}
+
+.theme-toggle-btn:hover i {
+  color: #a400ff;
+}

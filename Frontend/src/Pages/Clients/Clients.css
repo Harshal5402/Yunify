@@ -1,0 +1,200 @@
+.clients-page {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.clients-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.client-card {
+  /* background: white; */
+  background: rgba(0, 207, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: fade-in 1s forwards;
+  opacity: 0;
+}
+
+.client-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.client-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 12px;
+   background: rgba(255, 255, 255, 0.05); /* soft background to highlight logos */
+  padding: 10px;
+  border-radius: 12px;
+  mix-blend-mode: lighten;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Soft lift effect */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Optional */
+  /* filter: invert(1);  */
+  /* filter: brightness(10); */
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 3px rgba(0, 0, 0, 0.6));
+  
+}
+
+.client-card p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  animation: scaleIn 0.3s ease forwards;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.modal-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+ .modal-content button:hover {
+  background: rgba(0, 207, 255, 0.05);
+} 
+
+/* Animation CSS */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+  animation: float 15s ease-in-out infinite alternate;
+}
+
+.c1 {
+  width: 300px;
+  height: 300px;
+  background: #00cfff;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.c2 {
+  width: 200px;
+  height: 200px;
+  background: #a400ff;
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 3s;
+}
+.c3 {
+  width: 250px;
+  height: 250px;
+  background: #ff00c8;
+  top: 40%;
+  right: 20%;
+  animation-delay: 6s;
+}
+.c4 {
+  width: 180px;
+  height: 180px;
+  background: #00ffb7;
+  bottom: 25%;
+  left: 20%;
+  animation-delay: 9s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-30px) translateX(30px);
+  }
+}

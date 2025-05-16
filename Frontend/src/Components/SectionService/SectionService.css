@@ -1,0 +1,199 @@
+/* .services-section {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #00cfff, #a400ff, #ff00ff);
+  color: white;
+  border-radius: 20px;
+  width: 280px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: perspective(1000px) rotateX(12deg) rotateY(12deg) scale(1.07);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: var(--bg-color);
+}
+
+
+.service-icon i {
+  font-size: 40px;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon i {
+  transform: rotateY(10deg) scale(1.2);
+} */
+
+
+
+
+
+.services-section {
+  padding: 70px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  width: 280px;
+  padding: 35px 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: perspective(1000px) rotateX(12deg) rotateY(12deg) scale(1.07);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.service-icon i {
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon i {
+  transform: scale(1.25) rotate(6deg);
+}
+
+.service-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.explore-btn {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.explore-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+
+
+@media (max-width: 768px) {
+  .services-grid {
+    gap: 25px;
+  }
+
+  .service-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
