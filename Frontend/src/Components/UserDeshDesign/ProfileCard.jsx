@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import "./ProfileCard.css";
+import { StoreContext } from "../../context/StoreContext";
 
 const ProfileCard = () => {
   const [user, setUser] = useState(null);
+    const { token, setToken, url } = useContext(StoreContext);
   const [formData, setFormData] = useState({
     fullName: "",
     profileImage: "",
@@ -23,6 +25,8 @@ const ProfileCard = () => {
     const fetchProfile = async () => {
       try {
         setLoading(true);
+        console.log("Token:", localStorage.getItem("token"))
+
         const res = await axios.get(backendURL, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
