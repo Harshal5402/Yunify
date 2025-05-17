@@ -50,7 +50,7 @@ function UserManagement() {
   };
 
   return (
-    <div className="admin-dashboard">
+    <div className="user-management-container">
       <div className="welcome-text">User Management - Yunify</div>
 
       <div className="search-bar">

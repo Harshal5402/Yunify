@@ -1,5 +1,6 @@
 import React from 'react';
 import "./SectionService.css";
+import { useNavigate } from "react-router-dom"; 
 
 const services = [
   {
@@ -35,6 +36,12 @@ const services = [
 ];
 
 const SectionService = () => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/services')
+  }
+
   return (
     <section className="services-section">
       <h2 className="section-title">Our Services</h2>
@@ -49,7 +56,7 @@ const SectionService = () => {
             </div>
             <h3 className="service-title">{service.title}</h3>
             <p className="service-desc">{service.desc}</p>
-            <button className="explore-btn">Explore</button>
+            <button className="explore-btn" onClick={handleClick}>Explore</button>
           </div>
         ))}
       </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Home.css"
 import Header from '../../Components/Header/Header'
 import LogoMarque from '../../Components/LogoMarque/LogoMarque'
@@ -9,7 +9,8 @@ import TestimonialSlider from '../../Components/TestimonialSlider/TestimonialSli
 import HowItWorks from '../../Components/HowItWorks/HowItWorks'
 import Footer from '../../Components/Footer/Footer'
 
-const Home = () => {
+const Home = ({ setShowLogin, setIsSignup }) => {
+
   return (
     <>
 
@@ -21,7 +22,7 @@ const Home = () => {
       </div>
 
     <div className="home-content">
-        <Header/>
+        <Header setShowLogin={setShowLogin} setIsSignup={setIsSignup}/>
         <IntroSection />
         <SectionService />
         <WhyChoose />

@@ -17,15 +17,29 @@ import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
 
   return (
     <>
-      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <> </>}
+      {showLogin ? (
+        <LoginPopup
+          setShowLogin={setShowLogin}
+          isSignup={isSignup}
+          setIsSignup={setIsSignup}
+        />
+      ) : (
+        <> </>
+      )}
       <ToastContainer />
       <div style={{ backgroundColor: "var(--bg-color)" }}>
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Home setShowLogin={setShowLogin} setIsSignup={setIsSignup} />
+            }
+          />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/clients" element={<Clients />} />
