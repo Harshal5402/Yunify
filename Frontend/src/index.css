@@ -34,6 +34,7 @@ body::-webkit-scrollbar{
   --header-gradient-start: #00cfff;
   --header-gradient-mid: #a400ff;
   --header-gradient-end: #ff00ff;
+  --menu-bg: rgba(255, 255, 255, 0.9);
 }
 
 body.dark-mode {
@@ -46,5 +47,6 @@ body.dark-mode {
    --header-gradient-start: #00cfff;
   --header-gradient-mid: #a400ff;
   --header-gradient-end: #ff00ff;
+  --menu-bg: rgba(18, 18, 18, 0.9);
 }
 

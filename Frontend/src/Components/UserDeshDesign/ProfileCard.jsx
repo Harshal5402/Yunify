@@ -130,7 +130,7 @@ const ProfileCard = () => {
 
       {isEditing && (
         <div className="modal-overlay" onClick={closeEdit}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-contents" onClick={(e) => e.stopPropagation()}>
             <h3>Edit Profile</h3>
             <form className="edit-form" onSubmit={handleSubmit}>
               <label>
