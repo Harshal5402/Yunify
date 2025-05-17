@@ -9,7 +9,11 @@ const app = express();
 const port = 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+ origin: process.env.USER_WEBSITE, 
+  credentials: true
+}
+));
 
 connectDB();
 
